@@ -1,0 +1,17 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AppDock 计算器应用 —— 网页计算器，计算历史存 PostgreSQL（遵循 docs/app-deploy-guide.md 运行时契约）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.16.0"
+  }
+}

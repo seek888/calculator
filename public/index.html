@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>计算器</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <h1>计算器</h1>
+      <span id="db-badge" class="badge badge--unknown">检测数据库…</span>
+    </header>
+
+    <div class="columns">
+      <section class="card calc">
+        <div class="screen">
+          <div id="expr" class="screen__expr">&nbsp;</div>
+          <div id="display" class="screen__main">0</div>
+        </div>
+        <div class="keys">
+          <button class="key key--fn" data-action="clear">C</button>
+          <button class="key key--fn" data-action="sign">±</button>
+          <button class="key key--fn" data-action="percent">%</button>
+          <button class="key key--op" data-op="/">÷</button>
+
+          <button class="key" data-digit="7">7</button>
+          <button class="key" data-digit="8">8</button>
+          <button class="key" data-digit="9">9</button>
+          <button class="key key--op" data-op="*">×</button>
+
+          <button class="key" data-digit="4">4</button>
+          <button class="key" data-digit="5">5</button>
+          <button class="key" data-digit="6">6</button>
+          <button class="key key--op" data-op="-">−</button>
+
+          <button class="key" data-digit="1">1</button>
+          <button class="key" data-digit="2">2</button>
+          <button class="key" data-digit="3">3</button>
+          <button class="key key--op" data-op="+">+</button>
+
+          <button class="key" data-digit="0">0</button>
+          <button class="key" data-action="dot">.</button>
+          <button class="key key--fn" data-action="back">⌫</button>
+          <button class="key key--eq" data-action="equals">=</button>
+        </div>
+        <p id="hint" class="hint" hidden></p>
+      </section>
+
+      <section class="card history">
+        <div class="history__head">
+          <h2>计算历史</h2>
+          <button id="clear-history" class="linklike" type="button">清空</button>
+        </div>
+        <ul id="history-list" class="history__list">
+          <li class="history__empty">暂无记录</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="foot">支持键盘输入：数字 / + − * / / 回车（=）/ Esc（C）/ 退格</footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
